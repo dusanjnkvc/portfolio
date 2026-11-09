@@ -17,7 +17,7 @@ export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('dj-theme') || 'dark');
   const [mobileOpen, setMobileOpen] = useState(false);
   const [role, setRole] = useState(0);
-  const [activeRole, setActiveRole] = useState<string | null>('segula-lead');
+  const [activeRole, setActiveRole] = useState<string | null>('vertiv');
   const [projectId, setProjectId] = useState<string | null>(() => new URLSearchParams(location.search).get('project'));
   const [logenTab, setLogenTab] = useState(0);
   const [skillTab, setSkillTab] = useState(0);
@@ -122,7 +122,7 @@ export default function App() {
         <div className="hero-bottom"><span className="location"><MapPin size={14} />{t.hero.location}</span><span className="mono hero-discipline">{t.hero.discipline}</span><a href="#about" className="scroll-link mono">{t.hero.scroll}<ArrowDown size={15} /></a></div>
       </section>
 
-      <div className="industry-strip"><span className="mono">{t.hero.discipline}</span><div className="company-wordmarks"><span>VOLKSWAGEN</span><span>STELLANTIS</span><span>OPEL</span><span>SEGULA<span className="company-sub"> TECHNOLOGY</span></span></div></div>
+      <div className="industry-strip"><span className="mono">{t.hero.discipline}</span><div className="company-wordmarks">{['volkswagen','stellantis','opel','segula','vertiv'].map(company => <img key={company} className={'company-logo logo-'+company} src={`${import.meta.env.BASE_URL}logos/${company}.svg`} alt={company === 'segula' ? 'SEGULA Technologies' : company.charAt(0).toUpperCase()+company.slice(1)} />)}</div></div>
 
       <section id="about" className="section about-section">
         <div className="section-heading" data-reveal><span className="eyebrow"><span className="section-number">01</span>{t.about.kicker.replace(/^\d+\s*\/\s*/, '')}</span><h2>{t.about.title}</h2></div>
