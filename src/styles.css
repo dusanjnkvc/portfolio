@@ -14,3 +14,5 @@
 
 .company-wordmarks .company-logo{width:125px;height:34px;object-fit:contain;filter:brightness(0) invert(1);opacity:.75}.company-wordmarks .logo-volkswagen,.company-wordmarks .logo-opel{width:48px;height:44px}[data-theme=light] .company-wordmarks .company-logo{filter:brightness(0);opacity:.8}@media(max-width:680px){.company-wordmarks{grid-template-columns:repeat(3,minmax(0,1fr));gap:25px 20px}.company-wordmarks .company-logo{width:95px;height:27px;max-width:100%}.company-wordmarks .logo-volkswagen,.company-wordmarks .logo-opel{width:38px;height:38px}}
 
+@media(min-width:681px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-illustration{max-height:280px}.project-illustration>svg{max-height:260px}}
+
